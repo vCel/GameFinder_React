@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import "./stylesheets/App.css";
+import Search from "./components/search.jsx";
+import ResultList from "./components/resultList";
+import { useState } from "react";
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  const [selectedGame, setSelectedGame] = useState();
+	document.title = "Game Finder";
+
+
+	return (
+		<div className="back">
+			<div className="App">
+				<Search setSelectedGame={setSelectedGame} />
+				<ResultList selectedGame={selectedGame} />
+        
+			</div>
+		</div>
+	);
 }
 
 export default App;
