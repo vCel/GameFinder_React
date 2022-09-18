@@ -170,6 +170,11 @@ input, button {
     text-decoration: underline;
 }
 
+.section-1 .side-box-top a:active {
+    color: var(--secondary);
+    transition: ease-in-out 0.1s;
+}
+
 .section-1 .side-box-top > .game-price {
     font-weight: 500;
 }
