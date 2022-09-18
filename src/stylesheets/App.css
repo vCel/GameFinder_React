@@ -28,7 +28,7 @@ p {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: min(100% - 5rem, 1200px);
+    width: min(100% - 2rem, 1200px);
     margin-inline: auto;
     /* background-color: darkgray; */
     font-family: 'Questrial', sans-serif;
@@ -157,7 +157,7 @@ input, button {
     margin-left: 15px;
     flex-direction: column;
     width: 100%;
-    
+    word-wrap: break-word;
 }
 
 .section-1 .side-box-top {
@@ -270,7 +270,7 @@ input, button {
     max-width: 49%;
     padding-left: 2px;
     padding-right: 2px;
-    
+    word-wrap: break-word;
     /* flex-grow: 1;
     flex-shrink: 0;
     width: min(100% - 10rem, 50%); */

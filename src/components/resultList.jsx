@@ -4,23 +4,12 @@ import { FetchGame } from "./hooks";
 const Result = lazy(() => import("./result"));
 
 const ResultList = ({ selectedGame }) => {
-	// const [gameID, setGameID] = useState(0);
+	// Fetch data from the custom hook for the game details and recommendations
 	const { gameData, recommendations } = FetchGame(selectedGame);
-
-	// useEffect(() => {
-	// 	// Checks to make sure that the selected game has not been the same game
-	// 	if (
-	// 		typeof selectedGame !== "undefined" &&
-	// 		selectedGame !== gameID &&
-	// 		gameData.length !== 0
-	// 	) {
-	// 		setGameID(selectedGame);
-	// 	}
-	// }, [selectedGame, gameID, recommendations, gameData]);
 
 	return (
 		<div className="results">
-			{selectedGame !== 0 && (
+			{selectedGame && (
 				<div>
 					<h2>Search Results</h2>
 					<div className="results-container">

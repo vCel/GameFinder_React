@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Collapse } from "react-collapse";
 import ThumbUpIcon from "@mui/icons-material/ThumbUp";
 import ThumbDownIcon from "@mui/icons-material/ThumbDown";
@@ -8,8 +8,6 @@ import EmojiEmotionsIcon from "@mui/icons-material/EmojiEmotions";
 
 const Result = ({ gameData }) => {
 	const [reviewOpen, setReviewOpen] = useState(false);
-
-	useEffect(() => {}, [gameData]);
 
 	return (
 		<div className="game-container">
