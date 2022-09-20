@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { GetGame } from "../api/gameapi";
+import { GetCounter } from "../api/s3counter";
 
 // Fetches game information and recommendations from the API Mashup
 export const FetchGame = (gameid) => {
@@ -36,3 +37,16 @@ export const FetchGame = (gameid) => {
 
 	return { gameData, recommendations };
 };
+
+// Fetches the counter
+export const FetchCounter = () => {
+	const [counter, setCounter] = useState("Loading...");
+
+	useEffect(() => {
+		GetCounter().then(_ => {
+			setCounter(_?.count)
+		})
+	}, [])
+
+	return counter;
+}
